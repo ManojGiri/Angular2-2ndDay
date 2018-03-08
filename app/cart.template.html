@@ -1,0 +1,24 @@
+ <h1>{{heading}}</h1>
+
+<input type="text" value={{heading}} (input)="changeHeadingT($event)"><br/>
+ng Model Example - 
+<input type="text" [(ngModel)]="heading">
+ <input type="button" value="click me" (click)="changeHeading()"/>
+ <br/>
+ <input type="checkbox" [(ngModel)]="ApplyStyle">
+
+<input type="button" value="StyledButton" [ngClass]="{'Highlight':ApplyStyle}">
+
+
+<input type="button" value="StyledButton" [ngClass]="ApplyStyle ? classToBeApplied : ''">
+  <table>
+ <div *ngFor="let p of products">
+   
+         <tr>
+             <td>
+  <product [prodDetails]="p"></product>
+  </td>
+         </tr>    
+  </div>
+
+   </table>
